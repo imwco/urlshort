@@ -1,0 +1,4 @@
+[build]
+  base    = "./urlshort"
+  publish = "./urlshort/build"
+  command = "npm run build"
