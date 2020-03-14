@@ -2,11 +2,14 @@ const express = require('express');
 const cors = require('cors');
 
 const { query, endConnect } = require('./db');
+const urlhashRouter = require('./routes/urlhashRouter');
 
 const server = express();
 
 server.use(cors());
 server.use(express.json());
+
+server.use('/', urlhashRouter);
 
 server.get('/', (req, res) =>
   res.status(200).json("Welcome to the Url Shortener app server!")
