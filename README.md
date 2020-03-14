@@ -25,9 +25,10 @@ Other considerations
 - Load balancer
 
 ## Server Setup
-Create a `.env` file with the variable `LOCAL_POSTGRES` with the local postgres database name you want to use.
+Create a `.env` file with the following variables based on your local setup.
 
 .env
 ```
-LOCAL_POSTGRES="urlshort"
+LOCAL_PG_UN="<database_username>"
+LOCAL_PG_DB="<database_name>"
 ```
