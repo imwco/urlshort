@@ -22,6 +22,7 @@ router.get('/get', async (req, res) => {
     const hash = hashUrl.split('/').pop();
     try {
         const reply = await query('SELECT url FROM urlhash WHERE hash = $1', [hash]);
+        res.send(200).json({ url: reply });
     } catch(err) {
         res.status(500).json({ error: err, message: 'Unable to retrieve url for hash.'});
     }

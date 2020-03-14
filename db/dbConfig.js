@@ -10,11 +10,8 @@ module.exports = {
     },
   
     production: {
-      host: process.env.HEROKU_PG_HOST,
-      port: process.env.HEROKU_PG_PORT,
-      user: process.env.HEROKU_PG_UN,
-      password: process.env.HEROKU_PG_PW,
-      database: process.env.HEROKU_PG_DB
+      connectionString: process.env.DATABASE_URL,
+      ssl: true
     }
   
   };
