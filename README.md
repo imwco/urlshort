@@ -23,3 +23,11 @@ Michael & Peter's First App
 
 Other considerations
 - Load balancer
+
+## Server Setup
+Create a `.env` file with the variable `LOCAL_POSTGRES` with the local postgres database name you want to use.
+
+.env
+```
+LOCAL_POSTGRES="urlshort"
+```
